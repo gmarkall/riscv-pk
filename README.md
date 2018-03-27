@@ -29,13 +29,8 @@ directory is not supported; you need to use a separate build directory.
     $ make install
 
 Alternatively, the GNU/Linux toolchain may be used to build this package,
-by setting `--host=riscv64-unknown-linux-gnu`.
+by setting `--host=riscv64-unknown-linux-gnu`, or a 32-bit build may be produced
+by setting `--host=riscv32-unknown-elf`.
 
-By default, 64-bit (RV64) versions of `pk` and `bbl` are built.  To
-built 32-bit (RV32) versions, supply a `--enable-32bit` flag to the
-configure command.
-
-The `install` step installs 64-bit build products into a directory
-matching your host (e.g. `$RISCV/riscv64-unknown-elf`). 32-bit versions 
-are installed into a directory matching a 32-bit version of your host (e.g.
-`$RISCV/riscv32-unknown-elf`).
+The `install` step installs build products into a directory matching your host
+(e.g. `$RISCV/riscv64-unknown-elf` or `$RISCV/riscv32-unknown-elf`).
